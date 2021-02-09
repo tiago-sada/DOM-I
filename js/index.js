@@ -58,7 +58,7 @@ ctaText.textContent = siteContent.cta.h1;
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent.cta.button;
 
-const ctaImg = document.querySelector(".cta img");
+const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent.cta["img-src"]
 
 
@@ -78,7 +78,7 @@ mainSectionContent[2].textContent = siteContent["main-content"]["services-conten
 mainSectionContent[3].textContent = siteContent["main-content"]["product-content"];
 mainSectionContent[4].textContent = siteContent["main-content"]["vision-content"];
 
-const mainSectionImg = document.querySelector(".main-content img");
+const mainSectionImg = document.querySelector("#middle-img");
 mainSectionImg.src = siteContent["main-content"]["middle-img-src"];
 
 
