@@ -43,13 +43,26 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // HEADER
 const nav = document.querySelector("nav");
-const navLinks = document.querySelectorAll("nav a");
+let navLinks = document.querySelectorAll("nav a");
 navLinks[0].textContent = siteContent.nav["nav-item-1"];
 navLinks[1].textContent = siteContent.nav["nav-item-2"];
 navLinks[2].textContent = siteContent.nav["nav-item-3"];
 navLinks[3].textContent = siteContent.nav["nav-item-4"];
 navLinks[4].textContent = siteContent.nav["nav-item-5"];
 navLinks[5].textContent = siteContent.nav["nav-item-6"];
+
+const homeLink = navLinks[0].cloneNode(true);
+homeLink.textContent = "Home";
+nav.prepend(homeLink);
+const companyLink = navLinks[0].cloneNode(true);
+companyLink.textContent = "Company"; 
+nav.appendChild(companyLink);
+navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(element => {
+  console.log(element);
+  element.style.color = "green";
+});
 
 // CTA
 const ctaText = document.querySelector(".cta-text h1");
@@ -95,6 +108,4 @@ contactDetails[2].textContent = siteContent["contact"]["email"];
 // FOOTER
 const footerCopyright = document.querySelector("footer p");
 footerCopyright.textContent = siteContent["footer"]["copyright"];
-
-
 
